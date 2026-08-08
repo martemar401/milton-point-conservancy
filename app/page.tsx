@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Milton Point Conservancy home">
-          <Image src="/logo.svg" alt="Milton Point Conservancy" width={272} height={64} priority />
+          <Image src="/milton-point-logo.png" alt="Milton Point Conservancy — Blind Brook Estuary, Rye, New York" width={432} height={140} priority />
         </a>
         <nav aria-label="Main navigation">
           <a href="#places">Our places</a>
@@ -30,8 +30,8 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <Image src="/bird-homestead.jpg" alt="The historic Bird Homestead in Rye, New York" fill priority sizes="(max-width: 900px) 100vw, 55vw" />
-          <span className="image-note">The Bird Homestead · Est. 1835</span>
+          <Image src="/rye-meeting-house-06.webp" alt="The historic Rye Meeting House and its bell cupola" fill priority sizes="(max-width: 900px) 100vw, 55vw" />
+          <span className="image-note">Rye Meeting House · Photograph courtesy of ABA</span>
         </div>
       </section>
 
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <Image src="/logo-reverse.svg" alt="Milton Point Conservancy" width={285} height={68} />
+        <Image className="footer-logo" src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} />
         <div className="footer-copy">
           <p>Protecting Rye’s history, one place at a time.</p>
           <p className="fine">Milton Point Conservancy is an independent nonprofit stewarding City of Rye historic properties.</p>
