@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f5f0e5"/>
-  <rect x="48" y="48" width="1104" height="534" rx="4" fill="none" stroke="#d8cdb8" stroke-width="2"/>
-  <g transform="translate(95 170)">
-    <g fill="none" stroke="#174c3f" stroke-width="10">
-      <path d="M0 202h205M16 200c38-15 66-15 99 0 33-15 60-15 91 0"/>
-      <path d="M34 165V70h130v95M18 73h164M63 70V38h73v32"/>
-      <path d="M77 165v-51h46v51"/>
-    </g>
-    <path d="M167 43c20-20 42-20 61-6-21-1-36 5-47 20" fill="#d89b49"/>
+  <rect width="1200" height="630" fill="#f5f0e5"/><rect x="44" y="44" width="1112" height="542" fill="none" stroke="#cfc2a9" stroke-width="2"/>
+  <g transform="translate(92 125) scale(2.9)">
+    <ellipse cx="65" cy="65" rx="60" ry="59" fill="none" stroke="#173f36" stroke-width="2.5"/><ellipse cx="65" cy="65" rx="54" ry="53" fill="none" stroke="#c18b45"/>
+    <path d="M20 91c17-5 31-4 45 1 14-5 29-6 45-1M18 98c17-4 31-3 47 2 15-5 30-6 47-2M30 91c-1-15-1-27 2-39M37 91c1-18 4-32 9-44M101 91c0-16-2-29-5-40M94 91c-1-19-5-33-10-45" fill="none" stroke="#173f36" stroke-width="2" stroke-linecap="round"/>
+    <path d="M59 91c2-14 2-27 0-39-1-9 2-18 9-23 6-4 13-4 20-1-7 0-12 3-15 8-3 5-2 10 1 15 4 7 5 16 3 27l-2 13h-5l1-16c1-10-2-17-8-21-4-3-7-3-10-1 2-5 5-8 10-9-1-4 0-8 2-11-7 7-9 16-7 27 2 12 1 22-2 31z" fill="#173f36"/><path d="M86 29l19 4-18 4z" fill="#c18b45"/>
   </g>
-  <text x="355" y="286" fill="#174c3f" font-family="Georgia, 'Times New Roman', serif" font-size="92">Milton Point</text>
-  <text x="362" y="366" fill="#a84f32" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="10">CONSERVANCY</text>
-  <line x1="362" y1="407" x2="1050" y2="407" stroke="#d89b49" stroke-width="3"/>
-  <text x="362" y="464" fill="#174c3f" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-style="italic">History lives here.</text>
-  <text x="99" y="545" fill="#6b7c76" font-family="Arial, Helvetica, sans-serif" font-size="19" letter-spacing="3">RYE, NEW YORK</text>
+  <text x="500" y="260" fill="#173f36" font-family="Georgia, 'Times New Roman', serif" font-size="90">Milton Point</text>
+  <line x1="505" y1="290" x2="1070" y2="290" stroke="#c18b45" stroke-width="3"/>
+  <text x="508" y="354" fill="#173f36" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" letter-spacing="10">CONSERVANCY</text>
+  <text x="511" y="405" fill="#9c4f35" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" letter-spacing="6">RYE, NEW YORK</text>
+  <text x="508" y="486" fill="#173f36" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-style="italic">Preserving the stories of Milton Point.</text>
 </svg>

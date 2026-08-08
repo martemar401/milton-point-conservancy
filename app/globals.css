@@ -7,7 +7,7 @@ html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:var(--cream); font-family:'DM Sans',sans-serif; }
 a { color:inherit; text-decoration:none; }
 .site-header { height:90px; padding:0 4vw; display:flex; align-items:center; justify-content:space-between; background:#fbf8f0; position:relative; z-index:5; }
-.brand img { width:245px; height:auto; display:block; }
+.brand img { width:305px; height:auto; display:block; }
 nav { display:flex; align-items:center; gap:2.1rem; font-size:.86rem; font-weight:600; }
 nav a:not(.nav-give):hover { color:var(--rust); }
 .nav-give { background:var(--gold); padding:.8rem 1.2rem; border-radius:2rem; }
@@ -59,14 +59,14 @@ h1 { font-size:clamp(3.5rem,5.9vw,6.6rem); line-height:.91; max-width:720px; }
 .visit-details { display:grid; grid-template-columns:1fr 1fr; gap:2rem; line-height:1.7; align-content:center; }
 .visit-details .text-link { grid-column:1/-1; }
 footer { background:#102f29; color:white; padding:4rem 5vw 3rem; display:grid; grid-template-columns:.9fr 1.4fr .5fr; align-items:start; gap:4rem; }
-footer img { width:270px; height:auto; }
+footer img { width:325px; height:auto; }
 .footer-copy p { margin-top:0; }
 .fine { color:#9db2ac; font-size:.75rem; line-height:1.6; max-width:470px; }
 footer>a { justify-self:end; border-bottom:1px solid white; padding-bottom:.25rem; }
 
 @media (max-width:900px) {
   .site-header { height:76px; padding:0 1.2rem; }
-  .brand img { width:205px; }
+  .brand img { width:225px; }
   nav a:not(.nav-give) { display:none; }
   .nav-give { padding:.65rem 1rem; }
   .hero { grid-template-columns:1fr; }
