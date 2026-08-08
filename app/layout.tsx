@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Milton Point Conservancy | Rye, New York",
     description,
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: { title: "Milton Point Conservancy", description, images: [{ url: image, width: 1728, height: 926 }] },
+    openGraph: { title: "Milton Point Conservancy", description, images: [{ url: image, width: 1200, height: 630 }] },
     twitter: { card: "summary_large_image", title: "Milton Point Conservancy", description, images: [image] },
   };
 }
