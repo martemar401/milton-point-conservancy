@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Milton Point Conservancy home">
-          <Image src="/milton-point-logo.png" alt="Milton Point Conservancy — Blind Brook Estuary, Rye, New York" width={432} height={140} priority />
+          <span className="logo-crop"><Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} priority /></span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#places">Our places</a>
@@ -68,6 +68,18 @@ export default function Home() {
             <span>Drawing courtesy of Abruzzo Bodziak Architects</span>
           </figcaption>
         </figure>
+      </section>
+
+      <section className="landscape" aria-labelledby="landscape-title">
+        <div className="landscape-image">
+          <Image src="/rye-salt-marsh-autumn.jpg" alt="Golden salt marsh grasses beside the water in Rye, New York" fill sizes="(max-width: 900px) 100vw, 62vw" />
+        </div>
+        <div className="landscape-copy">
+          <p className="section-kicker light">A coastal inheritance</p>
+          <h2 id="landscape-title">History belongs to the landscape, too.</h2>
+          <p>Milton Point’s stories are inseparable from Rye’s marshes, waterways, and working shoreline. Protecting this place means keeping that relationship visible.</p>
+          <small>Rye salt marsh photograph by 10sefirot · <a href="https://commons.wikimedia.org/wiki/File:Salt_marsh_in_autumn.jpg" target="_blank" rel="noreferrer">CC BY-SA 4.0</a> · Cropped for display</small>
+        </div>
       </section>
 
       <section className="places" id="places">
@@ -136,7 +148,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <Image className="footer-logo" src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} />
+        <span className="logo-crop footer-logo"><Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} /></span>
         <div className="footer-copy">
           <p>Protecting Rye’s history, one place at a time.</p>
           <p className="fine">Milton Point Conservancy is an independent nonprofit stewarding City of Rye historic properties.</p>
