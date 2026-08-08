@@ -43,6 +43,33 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="site-plan" aria-labelledby="site-plan-title">
+        <div className="site-plan-heading">
+          <div>
+            <p className="section-kicker">The place we preserve</p>
+            <h2 id="site-plan-title">A historic landscape on Blind Brook Estuary</h2>
+          </div>
+          <p>
+            The Bird Homestead, Rye Meeting House, and William Voris Site form one connected cultural landscape at the edge of Milton Harbor.
+          </p>
+        </div>
+        <figure className="site-plan-figure">
+          <div className="site-plan-image">
+            <Image
+              src="/milton-point-site-plan.png"
+              alt="Architectural site plan showing the Bird Homestead, Rye Meeting House, William Voris Site, Milton Road, and Milton Harbor"
+              fill
+              sizes="(max-width: 900px) 100vw, 90vw"
+            />
+          </div>
+          <figcaption>
+            <span>Site plan</span>
+            <span>Milton Road · Rye, New York</span>
+            <span>Drawing courtesy of Abruzzo Bodziak Architects</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <section className="places" id="places">
         <div className="section-heading">
           <div>
