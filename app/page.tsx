@@ -21,7 +21,7 @@ export default function Home() {
             Three remarkable places. Centuries of local history. One shared future in the heart of Rye, New York.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href={donateUrl} target="_blank" rel="noreferrer">Donate to the restoration <Arrow /></a>
+            <a className="button button-primary hero-donate" href={donateUrl} target="_blank" rel="noreferrer">Donate now <Arrow /></a>
             <a className="text-link" href="#places">Explore our places <Arrow /></a>
           </div>
         </div>

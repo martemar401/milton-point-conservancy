@@ -52,6 +52,7 @@ h1 { font-size: clamp(3rem, 5.9vw, 6.6rem); line-height: .94; max-width: 720px; 
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 1.8rem; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 1.5rem; padding: .9rem 1.2rem; font-weight: 600; font-size: .86rem; border-radius: 2px; transition: transform .2s ease, background-color .2s ease; }
 .button-primary { background: var(--pine); color: white; }
+.hero-donate { min-height: 58px; padding: 1.05rem 1.5rem; font-size: 1rem; box-shadow: 0 10px 24px rgba(21,58,50,.18); }
 .button:hover { transform: translateY(-2px); }
 .text-link { display: inline-flex; min-height: 44px; gap: .5rem; align-items: center; font-size: .86rem; font-weight: 600; border-bottom: 1px solid currentColor; padding: .5rem 0 .25rem; width: max-content; max-width: 100%; }
 .hero-image { position: relative; min-height: 580px; overflow: hidden; }
@@ -163,7 +164,8 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .main-nav .nav-give { margin-top: 1rem; padding: .8rem 1.2rem; justify-content: center; border-bottom: 0; font-family: var(--font-sans), sans-serif; font-size: 1rem; }
 
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-image { min-height: clamp(360px, 66vw, 520px); grid-row: 1; }
+  .hero-image { min-height: clamp(360px, 66vw, 520px); grid-row: 2; }
+  .hero-copy { grid-row: 1; }
   .hero-copy { padding: clamp(3.5rem, 8vw, 5rem) var(--gutter); }
   h1 { max-width: 13ch; font-size: clamp(3rem, 9vw, 4.6rem); }
   .mission { padding-inline: var(--gutter); }
@@ -203,6 +205,7 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   h1 { font-size: clamp(2.75rem, 13.5vw, 3.7rem); }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .button { width: 100%; }
+  .hero-donate { min-height: 64px; padding: 1.2rem 1.4rem; font-size: 1.08rem; }
   .site-plan-heading h2, .visit-map-heading h2, .section-heading h2 { font-size: clamp(2.35rem, 11vw, 3rem); }
   .site-plan-image { aspect-ratio: 1 / 1.05; }
   .site-plan-figure figcaption { display: flex; flex-direction: column; gap: .45rem; padding-inline: var(--gutter); }
