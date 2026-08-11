@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
 
 const navigation = [
-  { href: "#places", label: "Our places" },
-  { href: "#story", label: "Our story" },
-  { href: "#visit", label: "Visit" },
+  { href: "/#places", label: "Our places" },
+  { href: "/our-story", label: "Our story" },
+  { href: "/#visit", label: "Visit" },
+  { href: "/contact", label: "Contact" },
 ];
-
-const donateUrl = "https://www.paypal.com/donate/?hosted_button_id=VB2RQ88HR5HQL";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -25,9 +25,9 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Milton Point Conservancy home" onClick={() => setOpen(false)}>
+      <Link className="brand" href="/" aria-label="Milton Point Conservancy home" onClick={() => setOpen(false)}>
         <BrandMark />
-      </a>
+      </Link>
       <button
         className="menu-toggle"
         type="button"
@@ -41,9 +41,9 @@ export function SiteHeader() {
       </button>
       <nav id={menuId} className={open ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
         {navigation.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+          <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
         ))}
-        <a className="nav-give" href={donateUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Donate now</a>
+        <Link className="nav-give" href="/donate" onClick={() => setOpen(false)}>Donate now</Link>
       </nav>
     </header>
   );

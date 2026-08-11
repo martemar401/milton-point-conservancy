@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { BrandMark } from "@/components/BrandMark";
+import Link from "next/link";
 import { MapSection } from "@/components/map/MapSection";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const donateUrl = "https://www.paypal.com/donate/?hosted_button_id=VB2RQ88HR5HQL";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
             Three remarkable places. Centuries of local history. One shared future in the heart of Rye, New York.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary hero-donate" href={donateUrl} target="_blank" rel="noreferrer">Donate now <Arrow /></a>
+            <Link className="button button-primary hero-donate" href="/donate">Donate now</Link>
             <a className="text-link" href="#places">Explore our places <Arrow /></a>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
           <p>
             A New York State challenge grant brings the Bird Homestead closer to restoration—but every public dollar must be matched. Your gift helps repair the exterior, protect the Meeting House, and prepare these places for learning and community life.
           </p>
-          <a className="button button-light" href={donateUrl} target="_blank" rel="noreferrer">Donate securely with PayPal <Arrow /></a>
+          <Link className="button button-light" href="/donate">Support the restoration</Link>
         </div>
         <div className="campaign-stat" aria-label="Restoration grant amount">
           <span>$172K</span>
@@ -145,15 +145,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <BrandMark inverse />
-        <div className="footer-copy">
-          <p>Protecting Rye’s history, one place at a time.</p>
-          <p className="fine">Milton Point Conservancy is an independent nonprofit stewarding City of Rye historic properties.</p>
-        </div>
-        <a href="mailto:info@miltonpointconservancy.org">Get in touch <Arrow /></a>
-      </footer>
       </main>
+      <SiteFooter />
     </>
   );
 }
