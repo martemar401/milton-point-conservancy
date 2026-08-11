@@ -87,13 +87,18 @@ h1 { font-size: clamp(3rem, 5.9vw, 6.6rem); line-height: .94; max-width: 720px; 
 .section-heading h2 { font-size: clamp(2.5rem, 4vw, 4.6rem); }
 .section-heading > p { max-width: 400px; line-height: 1.6; }
 .place-grid { max-width: var(--content); margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.85rem, 1.25vw, 1.25rem); }
-.place-card { min-height: clamp(390px, 32vw, 490px); padding: clamp(1.5rem, 2.4vw, 2rem); display: flex; flex-direction: column; justify-content: space-between; color: white; position: relative; overflow: hidden; }
-.place-card::before { content: ""; position: absolute; inset: 0; opacity: .22; background: repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.16) 23px 24px); }
-.place-card > * { position: relative; }
+.place-card { min-height: clamp(520px, 39vw, 620px); display: grid; grid-template-rows: minmax(230px, 1.08fr) minmax(260px, .92fr); color: white; position: relative; overflow: hidden; }
+.place-card-image { position: relative; min-height: 230px; overflow: hidden; background: #d8cdb8; }
+.place-card-image img { object-fit: cover; filter: saturate(.68) contrast(.96); transition: transform .5s ease; }
+.place-card:hover .place-card-image img { transform: scale(1.025); }
+.place-card-image.site-plan-card img { object-fit: cover; mix-blend-mode: multiply; filter: saturate(.45) contrast(.96); }
+.place-card-copy { position: relative; padding: clamp(1.5rem, 2.4vw, 2rem); }
+.place-card-copy::before { content: ""; position: absolute; inset: 0; opacity: .16; background: repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.16) 23px 24px); pointer-events: none; }
+.place-card-copy > * { position: relative; }
 .featured { background: var(--pine); }
 .meeting { background: var(--rust); }
 .voris { background: #866038; }
-.card-number { font-family: var(--font-serif), serif; font-size: 1.3rem; }
+.card-number { display: block; margin-bottom: 1.4rem; font-family: var(--font-serif), serif; font-size: 1.3rem; }
 .card-type { color: rgba(255,255,255,.78); }
 .place-card h3 { font-size: clamp(2.1rem, 2.8vw, 2.8rem); margin: .45rem 0 1rem; }
 .place-card p:last-child { line-height: 1.6; max-width: 390px; }
@@ -172,7 +177,7 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .landscape-image { min-height: clamp(370px, 68vw, 520px); }
   .landscape-copy { padding: clamp(4rem, 9vw, 5rem) var(--gutter); }
   .place-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .place-card:last-child { grid-column: 1 / -1; min-height: 320px; }
+  .place-card:last-child { grid-column: 1 / -1; min-height: 520px; grid-template-columns: 1.1fr .9fr; grid-template-rows: 1fr; }
   .map-layout { grid-template-columns: 1fr; min-height: 0; }
   .map-shell { min-height: clamp(430px, 62vw, 520px); position: relative; grid-row: 1; }
   .google-map { min-height: clamp(430px, 62vw, 520px); }
@@ -205,7 +210,7 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .section-heading { display: block; }
   .section-heading > p { margin-top: 1rem; }
   .place-grid { grid-template-columns: 1fr; }
-  .place-card, .place-card:last-child { grid-column: auto; min-height: 350px; }
+  .place-card, .place-card:last-child { grid-column: auto; min-height: 520px; grid-template-columns: 1fr; grid-template-rows: minmax(230px, 1fr) auto; }
   .visit-map-section { padding-inline: 0; }
   .map-layout { border-inline: 0; }
   .map-shell, .google-map { min-height: 390px; }

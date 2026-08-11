@@ -9,6 +9,8 @@ const navigation = [
   { href: "#visit", label: "Visit" },
 ];
 
+const donateUrl = "https://www.paypal.com/donate/?hosted_button_id=VB2RQ88HR5HQL";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const menuId = useId();
@@ -41,7 +43,7 @@ export function SiteHeader() {
         {navigation.map((item) => (
           <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
         ))}
-        <a className="nav-give" href="#support" onClick={() => setOpen(false)}>Support us</a>
+        <a className="nav-give" href={donateUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Donate now</a>
       </nav>
     </header>
   );

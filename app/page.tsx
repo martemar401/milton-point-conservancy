@@ -4,6 +4,7 @@ import { MapSection } from "@/components/map/MapSection";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
+const donateUrl = "https://www.paypal.com/donate/?hosted_button_id=VB2RQ88HR5HQL";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             Three remarkable places. Centuries of local history. One shared future in the heart of Rye, New York.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#support">Help restore the Homestead <Arrow /></a>
+            <a className="button button-primary" href={donateUrl} target="_blank" rel="noreferrer">Donate to the restoration <Arrow /></a>
             <a className="text-link" href="#places">Explore our places <Arrow /></a>
           </div>
         </div>
@@ -87,24 +88,27 @@ export default function Home() {
         </div>
         <div className="place-grid">
           <article className="place-card featured">
-            <span className="card-number">01</span>
-            <div>
+            <div className="place-card-image"><Image src="/bird-homestead.jpg" alt="The historic Bird Homestead in Rye, New York" fill sizes="(max-width: 560px) 100vw, (max-width: 840px) 50vw, 33vw" /></div>
+            <div className="place-card-copy">
+              <span className="card-number">01</span>
               <p className="card-type">Greek Revival homestead · 1835</p>
               <h3>Bird Homestead</h3>
               <p>Home to five generations of the Bird family—scientists, explorers, artists, and beloved community figures.</p>
             </div>
           </article>
           <article className="place-card meeting">
-            <span className="card-number">02</span>
-            <div>
+            <div className="place-card-image"><Image src="/rye-meeting-house-06.webp" alt="The Rye Meeting House and its historic bell cupola" fill sizes="(max-width: 560px) 100vw, (max-width: 840px) 50vw, 33vw" /></div>
+            <div className="place-card-copy">
+              <span className="card-number">02</span>
               <p className="card-type">Schoolhouse & chapel · c. 1835</p>
               <h3>Rye Meeting House</h3>
               <p>A gathering place with many lives: school, chapel, lending library, Quaker meeting house, and community landmark.</p>
             </div>
           </article>
           <article className="place-card voris">
-            <span className="card-number">03</span>
-            <div>
+            <div className="place-card-image site-plan-card"><Image src="/milton-point-site-plan.png" alt="Architectural site plan locating the William Voris archaeological site" fill sizes="(max-width: 560px) 100vw, (max-width: 840px) 100vw, 33vw" /></div>
+            <div className="place-card-copy">
+              <span className="card-number">03</span>
               <p className="card-type">Historic landscape</p>
               <h3>William Voris Site</h3>
               <p>The former home and inn of a pioneering Black entrepreneur whose remarkable story belongs in Rye’s history.</p>
@@ -131,7 +135,7 @@ export default function Home() {
           <p>
             A New York State challenge grant brings the Bird Homestead closer to restoration—but every public dollar must be matched. Your gift helps repair the exterior, protect the Meeting House, and prepare these places for learning and community life.
           </p>
-          <a className="button button-light" href="mailto:info@miltonpointconservancy.org?subject=Supporting%20Milton%20Point%20Conservancy">Support the restoration <Arrow /></a>
+          <a className="button button-light" href={donateUrl} target="_blank" rel="noreferrer">Donate securely with PayPal <Arrow /></a>
         </div>
         <div className="campaign-stat" aria-label="Restoration grant amount">
           <span>$172K</span>
