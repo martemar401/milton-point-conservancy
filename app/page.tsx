@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BrandMark } from "@/components/BrandMark";
 import { MapSection } from "@/components/map/MapSection";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -141,7 +142,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <span className="logo-crop footer-logo"><Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} /></span>
+        <BrandMark inverse />
         <div className="footer-copy">
           <p>Protecting Rye’s history, one place at a time.</p>
           <p className="fine">Milton Point Conservancy is an independent nonprofit stewarding City of Rye historic properties.</p>

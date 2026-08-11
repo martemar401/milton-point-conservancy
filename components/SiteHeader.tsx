@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useId, useState } from "react";
+import { BrandMark } from "@/components/BrandMark";
 
 const navigation = [
   { href: "#places", label: "Our places" },
@@ -24,9 +24,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Milton Point Conservancy home" onClick={() => setOpen(false)}>
-        <span className="logo-crop">
-          <Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} priority />
-        </span>
+        <BrandMark />
       </a>
       <button
         className="menu-toggle"
