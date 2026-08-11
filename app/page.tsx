@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapSection } from "@/components/map/MapSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -115,17 +114,6 @@ export default function Home() {
             </div>
           </article>
         </div>
-      </section>
-
-      <section className="visit-map-section" id="visit" aria-labelledby="visit-title">
-        <div className="visit-map-heading">
-          <div>
-            <p className="section-kicker">Come find us</p>
-            <h2 id="visit-title">Three stories in one historic landscape.</h2>
-          </div>
-          <p>Explore the Bird Homestead, Rye Meeting House, and William Voris Site along Milton Road and Blind Brook Estuary.</p>
-        </div>
-        <MapSection />
       </section>
 
       <section className="campaign" id="support">

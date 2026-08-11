@@ -65,9 +65,9 @@ h1 { font-size: clamp(3rem, 5.9vw, 6.6rem); line-height: .94; max-width: 720px; 
 .mission > p:last-child { max-width: 680px; margin: auto; line-height: 1.75; font-size: clamp(1rem, .98rem + .15vw, 1.08rem); }
 
 .site-plan { padding: clamp(5rem, 7.5vw, 7.5rem) var(--gutter) clamp(4.5rem, 6vw, 6rem); background: var(--paper); border-top: 1px solid var(--sand); }
-.site-plan-heading, .visit-map-heading { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr); gap: clamp(2rem, 8vw, 8rem); align-items: end; margin: 0 auto 3rem; max-width: var(--content); }
-.site-plan-heading h2, .visit-map-heading h2 { font-size: clamp(2.5rem, 4.6vw, 5.2rem); line-height: 1.04; max-width: 850px; }
-.site-plan-heading > p, .visit-map-heading > p { line-height: 1.7; max-width: 430px; margin: 0 0 .4rem; }
+.site-plan-heading { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr); gap: clamp(2rem, 8vw, 8rem); align-items: end; margin: 0 auto 3rem; max-width: var(--content); }
+.site-plan-heading h2 { font-size: clamp(2.5rem, 4.6vw, 5.2rem); line-height: 1.04; max-width: 850px; }
+.site-plan-heading > p { line-height: 1.7; max-width: 430px; margin: 0 0 .4rem; }
 .site-plan-figure { margin: 0 auto; max-width: var(--content); border: 1px solid var(--border); background: #f6f1e8; box-shadow: 0 18px 50px rgba(21,58,50,.08); }
 .site-plan-image { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
 .site-plan-image img { object-fit: contain; mix-blend-mode: multiply; }
@@ -104,19 +104,7 @@ h1 { font-size: clamp(3rem, 5.9vw, 6.6rem); line-height: .94; max-width: 720px; 
 .place-card h3 { font-size: clamp(2.1rem, 2.8vw, 2.8rem); margin: .45rem 0 1rem; }
 .place-card p:last-child { line-height: 1.6; max-width: 390px; }
 
-.visit-map-section { padding: clamp(5rem, 7vw, 7rem) var(--gutter); background: var(--paper); }
-.map-layout { max-width: var(--content); margin: auto; display: grid; grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr); border: 1px solid var(--border); background: var(--cream); min-height: 610px; }
-.location-list { padding: clamp(1rem, 2vw, 2rem); display: flex; flex-direction: column; gap: .75rem; }
-.location-card { border: 1px solid transparent; background: rgba(255,255,255,.55); }
-.location-summary { width: 100%; display: grid; grid-template-columns: 2.5rem 1fr; gap: .85rem; padding: 1.15rem; color: var(--ink); }
-.location-number { color: var(--rust); font-family: var(--font-serif), serif; font-size: 1.2rem; }
-.location-summary > span:last-child { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
-.location-card small { color: var(--rust); font-size: .65rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; }
-.location-card strong { font-family: var(--font-serif), serif; font-weight: 500; font-size: clamp(1.45rem, 2vw, 1.85rem); }
-.location-summary span span { color: var(--muted); font-size: .82rem; line-height: 1.5; }
-.location-meta { display: flex; justify-content: space-between; gap: .75rem; padding: 0 1.15rem 1.1rem 4.5rem; color: var(--muted); font-size: .68rem; line-height: 1.45; }
-.location-meta a { flex: 0 0 auto; color: var(--ink); font-weight: 600; border-bottom: 1px solid currentColor; }
-.map-shell { min-width: 0; min-height: 610px; position: sticky; top: 0; }
+.map-only-shell { max-width: var(--content); min-height: 610px; margin: auto; border: 1px solid var(--border); background: var(--cream); }
 .google-map { display: block; width: 100%; height: 100%; min-height: 610px; border: 0; filter: saturate(.72) contrast(.96); }
 
 .campaign { background: var(--pine); color: white; padding: clamp(5rem, 8vw, 8rem) max(var(--gutter), 7vw); display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .7fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; }
@@ -183,6 +171,7 @@ h1 { font-size: clamp(3rem, 5.9vw, 6.6rem); line-height: .94; max-width: 720px; 
 .contact-details .button { grid-column: 1 / -1; justify-self: start; }
 .contact-map-section { padding: clamp(5rem, 8vw, 8rem) var(--gutter); background: #e8e0cf; }
 .contact-map-heading { max-width: var(--content); margin: 0 auto 3rem; }
+.contact-map-heading > p:last-child { max-width: 620px; line-height: 1.7; }
 
 footer { background: #102f29; color: white; padding: 4rem var(--gutter) 3rem; display: grid; grid-template-columns: minmax(260px, .9fr) minmax(280px, 1.4fr) minmax(120px, .5fr); align-items: start; gap: clamp(2rem, 4vw, 4rem); }
 .footer-copy p { margin-top: 0; }
@@ -196,7 +185,6 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .main-nav { gap: 1rem; }
   .hero { min-height: 600px; }
   .hero-copy { padding-left: var(--gutter); padding-right: var(--gutter); }
-  .map-layout { grid-template-columns: minmax(270px, .8fr) minmax(0, 1.2fr); }
   footer { grid-template-columns: 1fr 1fr; }
   footer > a { justify-self: start; }
 }
@@ -229,8 +217,8 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   h1 { max-width: 13ch; font-size: clamp(3rem, 9vw, 4.6rem); }
   .mission { padding-inline: var(--gutter); }
   .site-plan { padding-inline: 0; }
-  .site-plan-heading, .visit-map-heading { grid-template-columns: 1fr; gap: 1.35rem; padding-inline: var(--gutter); }
-  .site-plan-heading > p, .visit-map-heading > p { max-width: 42rem; }
+  .site-plan-heading { grid-template-columns: 1fr; gap: 1.35rem; padding-inline: var(--gutter); }
+  .site-plan-heading > p { max-width: 42rem; }
   .site-plan-figure { border-inline: 0; }
   .site-plan-figure figcaption { grid-template-columns: 1fr 1fr; }
   .site-plan-figure figcaption span:last-child { grid-column: 1 / -1; text-align: left; }
@@ -239,11 +227,8 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .landscape-copy { padding: clamp(4rem, 9vw, 5rem) var(--gutter); }
   .place-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .place-card:last-child { grid-column: 1 / -1; min-height: 520px; grid-template-columns: 1.1fr .9fr; grid-template-rows: 1fr; }
-  .map-layout { grid-template-columns: 1fr; min-height: 0; }
-  .map-shell { min-height: clamp(430px, 62vw, 520px); position: relative; grid-row: 1; }
+  .map-only-shell { min-height: clamp(430px, 62vw, 520px); }
   .google-map { min-height: clamp(430px, 62vw, 520px); }
-  .location-list { grid-row: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .location-card:last-child { grid-column: 1 / -1; }
   .campaign { grid-template-columns: 1fr; }
   .campaign-stat { border-left: 0; border-top: 1px solid rgba(255,255,255,.3); padding: 3rem 0 0; }
   footer { grid-template-columns: 1fr 1fr; }
@@ -278,7 +263,7 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .hero-actions { align-items: stretch; flex-direction: column; }
   .button { width: 100%; }
   .hero-donate { min-height: 64px; padding: 1.2rem 1.4rem; font-size: 1.08rem; }
-  .site-plan-heading h2, .visit-map-heading h2, .section-heading h2 { font-size: clamp(2.35rem, 11vw, 3rem); }
+  .site-plan-heading h2, .section-heading h2 { font-size: clamp(2.35rem, 11vw, 3rem); }
   .site-plan-image { aspect-ratio: 1 / 1.05; }
   .site-plan-figure figcaption { display: flex; flex-direction: column; gap: .45rem; padding-inline: var(--gutter); }
   .landscape-image { min-height: 360px; }
@@ -286,12 +271,7 @@ footer > a { justify-self: end; min-height: 44px; display: inline-flex; align-it
   .section-heading > p { margin-top: 1rem; }
   .place-grid { grid-template-columns: 1fr; }
   .place-card, .place-card:last-child { grid-column: auto; min-height: 520px; grid-template-columns: 1fr; grid-template-rows: minmax(230px, 1fr) auto; }
-  .visit-map-section { padding-inline: 0; }
-  .map-layout { border-inline: 0; }
-  .map-shell, .google-map { min-height: 390px; }
-  .location-list { grid-template-columns: 1fr; padding: var(--gutter); }
-  .location-card:last-child { grid-column: auto; }
-  .location-meta { padding-left: 1.15rem; flex-direction: column; }
+  .map-only-shell, .google-map { min-height: 390px; }
   .campaign h2 { font-size: clamp(2.8rem, 13vw, 4rem); }
   .campaign-stat span { font-size: clamp(4.4rem, 24vw, 6.5rem); }
   footer { grid-template-columns: 1fr; }
