@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import { DM_Sans, Newsreader } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
+
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const serif = Newsreader({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -18,5 +22,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en"><body className={`${sans.variable} ${serif.variable}`}>{children}</body></html>;
 }

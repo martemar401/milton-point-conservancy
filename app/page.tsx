@@ -1,21 +1,15 @@
 import Image from "next/image";
+import { MapSection } from "@/components/map/MapSection";
+import { SiteHeader } from "@/components/SiteHeader";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Milton Point Conservancy home">
-          <span className="logo-crop"><Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} priority /></span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#places">Our places</a>
-          <a href="#story">Our story</a>
-          <a href="#visit">Visit</a>
-          <a className="nav-give" href="#support">Support us</a>
-        </nav>
-      </header>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <SiteHeader />
+      <main id="main-content">
 
       <section className="hero" id="top">
         <div className="hero-copy">
@@ -118,6 +112,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="visit-map-section" id="visit" aria-labelledby="visit-title">
+        <div className="visit-map-heading">
+          <div>
+            <p className="section-kicker">Come find us</p>
+            <h2 id="visit-title">Three stories in one historic landscape.</h2>
+          </div>
+          <p>Explore the Bird Homestead, Rye Meeting House, and William Voris Site along Milton Road and Blind Brook Estuary.</p>
+        </div>
+        <MapSection />
+      </section>
+
       <section className="campaign" id="support">
         <div className="campaign-copy">
           <p className="section-kicker light">A once-in-a-generation restoration</p>
@@ -135,18 +140,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="visit" id="visit">
-        <div>
-          <p className="section-kicker">Come find us</p>
-          <h2>Two landmarks.<br />One walk through history.</h2>
-        </div>
-        <div className="visit-details">
-          <p><strong>Bird Homestead</strong><br />600 Milton Road<br />Rye, New York 10580</p>
-          <p><strong>Rye Meeting House</strong><br />624 Milton Road<br />Rye, New York 10580</p>
-          <a className="text-link" href="https://maps.google.com/?q=600+Milton+Road+Rye+NY+10580" target="_blank" rel="noreferrer">Get directions <Arrow /></a>
-        </div>
-      </section>
-
       <footer>
         <span className="logo-crop footer-logo"><Image src="/milton-point-logo.png" alt="Milton Point Conservancy" width={432} height={140} /></span>
         <div className="footer-copy">
@@ -155,6 +148,7 @@ export default function Home() {
         </div>
         <a href="mailto:info@miltonpointconservancy.org">Get in touch <Arrow /></a>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
